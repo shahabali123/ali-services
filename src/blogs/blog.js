@@ -484,8 +484,64 @@ const blogs = [
             </div>
             <p class="text-center text-muted small">Current Success Rate: 98.4% for Karachi | 97.1% for Islamabad</p>
         `
+    },
+        {
+        id: 24,
+        title: "The Ultimate Guide to US Visa Interview Preparation in 2026",
+        image: "/media/images/blog24.jpg",
+        date: "Feb 07, 2026",
+        author: "Shahab Ali",
+        category: "Interview Guide",
+        excerpt: "Walking into a US Embassy can be intimidating. This comprehensive guide covers everything from the DS-160 to the final handshake, ensuring you are fully prepared for your B1/B2 interview.",
+        content: `
+            <p>The US visa interview is unlike any other. It is not just about your documents; it is about <em>you</em>. In 2026, with wait times still high in many regions, securing your visa on the first try is more important than ever. This guide compiles years of experience into a roadmap for your success.</p>
+
+            <h5 class="mt-4">1. The Mindset: It's a Conversation, Not an Interrogation</h5>
+            <p>Many applicants enter the interview defensive or nervous. Consular officers are trained to detect nervousness as a potential sign of deception. Shift your mindset. You are a genuine traveler with a legitimate reason to visit the US and, more importantly, a legitimate reason to return home.</p>
+
+            <h5 class="mt-4">2. Your DS-160 is Your Script</h5>
+            <p>The officer has likely reviewed your DS-160 before calling your name. If you contradict what is in your form, you lose credibility immediately. Review your DS-160 submission. Know your travel dates, your contact in the US, and your job description by heart.</p>
+
+            <h5 class="mt-4">3. The "Strong Ties" Argument</h5>
+            <p>Section 214(b) of the INA presumes every applicant is an intending immigrant. Your job is to prove otherwise. How?</p>
+            <ul>
+                <li><strong>Professional Ties:</strong> Don't just say "I am a manager." Say, "I manage a team of 15 people at a textile firm, overseeing a $2M annual budget, and I have been there for 8 years."</li>
+                <li><strong>Family Ties:</strong> Mention your spouse, children, or aging parents who rely on you in Pakistan.</li>
+                <li><strong>Financial Ties:</strong> Property deeds and business ownership are good, but a steady, long-term income stream is better.</li>
+            </ul>
+
+            <h5 class="mt-4">4. Common Questions & How to Answer</h5>
+            <p><strong>Q: Why are you going to the US?</strong><br>
+            <em>Bad:</em> "Tourism."<br>
+            <em>Good:</em> "I am visiting my cousin in Chicago for 10 days to attend her wedding, and we plan to spend a weekend in Niagara Falls."</p>
+
+            <p><strong>Q: How long will you stay?</strong><br>
+            <em>Bad:</em> "Maybe a few months."<br>
+            <em>Good:</em> "2 weeks. I have to be back by the 25th for my daughter's exams."</p>
+
+            <h5 class="mt-4">5. What to Bring (And What to Leave)</h5>
+            <p>Bring your passport, confirmation pages, and appointment letter. Bring supporting docs (bank statements, employment letters) but <em>do not offer them unless asked</em>. Trying to shove papers under the window can look desperate.</p>
+
+            <div class="alert alert-success mt-4">
+                <strong>Need a Mock Interview?</strong> We offer 1-on-1 coaching sessions to simulate the actual embassy experience. <a href="https://wa.me/923420475187" class="alert-link">Book a session with Shahab Ali</a>.
+            </div>
+        `
     }
 
 ];
 
 export default blogs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
