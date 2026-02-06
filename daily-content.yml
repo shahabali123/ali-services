@@ -1,0 +1,38 @@
+name: Daily Free Blogs
+
+on:
+  schedule:
+    # Runs at 06:00 UTC every day
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Generate 3 Blogs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node generate-blog.mjs
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'Naxgat Bot'
+          git config --global user.email 'bot@naxgat.com'
+          git add src/blogs/blog.js
+          git commit -m "📝 Added 3 new AI blogs [skip ci]"
+          git push
