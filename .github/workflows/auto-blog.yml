@@ -25,6 +25,8 @@ jobs:
         run: npm install
 
       - name: Run Blog Generator
+        env:
+          GH_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
         run: node generate-blog.mjs
 
       - name: Commit and Push changes

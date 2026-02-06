@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -39,31 +40,34 @@ const generateBlogs = async () => {
         let text;
         let success = false;
         const maxRetries = 3;
-        const useHF = !!process.env.HF_TOKEN;
+        const useGitHubModels = !!process.env.GH_MODELS_TOKEN;
 
-        console.log(useHF ? '🤖 Using Hugging Face API (Mistral)...' : '🤖 Using Pollinations.ai (Mistral)...');
+        console.log(useGitHubModels ? '🤖 Using GitHub Models API (GPT-4o)...' : '🤖 Using Pollinations.ai (Mistral) as fallback...');
 
         for (let i = 0; i < maxRetries; i++) {
             try {
                 console.log(`⏳ Attempt ${i + 1}/${maxRetries} connecting to AI...`);
                 let response;
 
-                if (useHF) {
-                    // Hugging Face Inference API (Reliable)
-                    response = await fetch("https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3", {
+                if (useGitHubModels) {
+                    // GitHub Models (Free Tier via Azure AI) - uses GPT-4o
+                    response = await fetch("https://models.inference.ai.azure.com/chat/completions", {
                         method: "POST",
                         headers: {
-                            "Authorization": `Bearer ${process.env.HF_TOKEN}`,
+                            "Authorization": `Bearer ${process.env.GH_MODELS_TOKEN}`,
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            inputs: `<s>[INST] ${prompt} [/INST]`,
-                            parameters: { max_new_tokens: 2500, return_full_text: false }
+                            messages: [
+                                { role: "system", content: "You are a helpful assistant that outputs only JSON." },
+                                { role: "user", content: prompt }
+                            ],
+                            model: "gpt-4o",
+                            temperature: 0.7
                         })
                     });
                 } else {
                     // Pollinations.ai Fallback (Free, no key)
-                    // Switched model to 'mistral' to avoid 502 errors on openai model
                     response = await fetch("https://text.pollinations.ai/", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -72,16 +76,16 @@ const generateBlogs = async () => {
                                 { role: "system", content: "You are a helpful assistant that outputs only JSON." },
                                 { role: "user", content: prompt }
                             ],
-                            model: "mistral", // Changed from 'openai' to 'mistral' for stability
+                            model: "mistral",
                             seed: Math.floor(Math.random() * 1000)
                         })
                     });
                 }
 
                 if (response.ok) {
-                    if (useHF) {
+                    if (useGitHubModels) {
                         const data = await response.json();
-                        text = Array.isArray(data) ? data[0].generated_text : data.generated_text;
+                        text = data.choices[0].message.content;
                     } else {
                         text = await response.text();
                     }
