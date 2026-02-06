@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import blogs from './blog';
 
 const BlogDetail = () => {
@@ -9,6 +10,10 @@ const BlogDetail = () => {
   if (!blog) {
     return (
       <div className="container mt-5 text-center">
+        <Helmet>
+          <title>Blog Not Found | Naxgat Visa Services</title>
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <h2>Blog not found</h2>
       </div>
     );
@@ -16,9 +21,77 @@ const BlogDetail = () => {
 
   const shareUrl = window.location.href;
   const title = blog.title;
+  
+  // SEO Constants
+  const siteUrl = "https://naxgat.com";
+  const blogUrl = `${siteUrl}/blogs/${blog.id}`;
+  
+  // Helper to ensure absolute image URL
+  const getAbsoluteImageUrl = (img) => {
+    if (!img) return `${siteUrl}/media/images/hero.jpeg`;
+    if (img.startsWith('http')) return img;
+    if (img.startsWith('/')) return `${siteUrl}${img}`;
+    return `${siteUrl}/${img}`;
+  };
+
+  const imageUrl = getAbsoluteImageUrl(blog.image);
 
   return (
     <div className="container mt-5">
+      <Helmet>
+        <title>{blog.title} | Naxgat Visa Insights</title>
+        <meta name="description" content={blog.excerpt || `Read about ${blog.title} on Naxgat Visa Services blog.`} />
+        <meta name="keywords" content={`US Visa, Pakistan, Visa Appointment, ${blog.category || 'Visa Tips'}, ${blog.title}`} />
+        <link rel="canonical" href={blogUrl} />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={blogUrl} />
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.excerpt} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:site_name" content="Naxgat Visa Services" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={blogUrl} />
+        <meta property="twitter:title" content={blog.title} />
+        <meta property="twitter:description" content={blog.excerpt} />
+        <meta property="twitter:image" content={imageUrl} />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": blog.title,
+            "image": [imageUrl],
+            "datePublished": blog.date,
+            "dateModified": blog.date,
+            "author": {
+              "@type": "Person",
+              "name": blog.author || "Naxgat Team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Naxgat Visa Services",
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${siteUrl}/media/images/hero.jpeg`
+              }
+            },
+            "description": blog.excerpt,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": blogUrl
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="row justify-content-center">
         <div className="col-lg-8">
           <article>

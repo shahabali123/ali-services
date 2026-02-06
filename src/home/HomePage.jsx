@@ -54,10 +54,33 @@ function HomePage() {
     return ( 
         <div className="container-fluid">
             <Helmet>
-                <title>US Visa Appointment Rescheduling Pakistan | Naxgat Visa Services</title>
-                <meta name="description" content="Secure earlier US Visa interview slots in Islamabad and Karachi. We specialize in B1/B2 visa appointment rescheduling and monitoring services to fast-track your travel." />
-                <meta name="keywords" content="US Visa Pakistan, Visa Appointment Rescheduling, Islamabad Consulate, Karachi Consulate, Early Visa Slots, US Visa Consultant, CGI Federal Monitor" />
+                <title>US Visa Appointment Rescheduling Pakistan | Fast-Track | Naxgat</title>
+                <meta name="description" content="Secure earlier US Visa interview slots in Islamabad and Karachi. We specialize in B1/B2 & F1 visa appointment rescheduling to fast-track your travel plans." />
+                <meta name="keywords" content="US Visa Pakistan, Visa Appointment Rescheduling, Islamabad Consulate, Karachi Consulate, Early Visa Slots, US Visa Consultant, CGI Federal Monitor, B1/B2 Visa, F1 Visa" />
                 <link rel="canonical" href="https://naxgat.com/" />
+                
+                {/* Robots & Crawlers */}
+                <meta name="robots" content="index, follow" />
+                <meta name="googlebot" content="index, follow" />
+
+                {/* Open Graph / Facebook / WhatsApp */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://naxgat.com/" />
+                <meta property="og:title" content="US Visa Appointment Rescheduling Pakistan | Naxgat" />
+                <meta property="og:description" content="Don't wait years for your US Visa. We help you secure earlier interview slots in Islamabad and Karachi." />
+                <meta property="og:image" content="https://naxgat.com/media/images/hero.jpeg" />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://naxgat.com/" />
+                <meta property="twitter:title" content="US Visa Appointment Rescheduling Pakistan | Naxgat" />
+                <meta property="twitter:description" content="Don't wait years for your US Visa. We help you secure earlier interview slots in Islamabad and Karachi." />
+                <meta property="twitter:image" content="https://naxgat.com/media/images/hero.jpeg" />
+
+                {/* Structured Data (JSON-LD) for Google Rich Results */}
+                <script type="application/ld+json">
+                    {`{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Naxgat Visa Services", "image": "https://naxgat.com/media/images/hero.jpeg", "description": "Specialized US Visa appointment rescheduling service for Pakistan.", "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" }, "priceRange": "PKR 40000", "telephone": "+923420475187", "url": "https://naxgat.com/"}`}
+                </script>
             </Helmet>
             <Hero onPlanSelect={handlePlanSelect} />
             <WhyChooseUs/>
