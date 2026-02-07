@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogs from './blog';
 
@@ -35,6 +35,10 @@ const BlogDetail = () => {
   };
 
   const imageUrl = getAbsoluteImageUrl(blog.image);
+
+  const currentIndex = blogs.findIndex((b) => b.id === blog.id);
+  const previousBlog = currentIndex < blogs.length - 1 ? blogs[currentIndex + 1] : null;
+  const nextBlog = currentIndex > 0 ? blogs[currentIndex - 1] : null;
 
   return (
     <div className="container mt-5">
@@ -166,6 +170,24 @@ const BlogDetail = () => {
                 <i className="fab fa-whatsapp me-2"></i> WhatsApp
               </a>
             </div>
+          </div>
+
+          {/* Navigation Buttons */}
+          <div className="d-flex justify-content-between mb-5">
+            {previousBlog ? (
+              <Link to={`/blogs/${previousBlog.id}`} className="btn btn-outline-primary rounded-pill px-4">
+                <i className="fas fa-arrow-left me-2"></i> Previous Article
+              </Link>
+            ) : (
+              <div></div>
+            )}
+            {nextBlog ? (
+              <Link to={`/blogs/${nextBlog.id}`} className="btn btn-outline-primary rounded-pill px-4">
+                Next Article <i className="fas fa-arrow-right ms-2"></i>
+              </Link>
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       </div>

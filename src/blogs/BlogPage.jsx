@@ -1,28 +1,23 @@
-// c:\Users\Lenovo\OneDrive\Desktop\visa resheduling\Ali-services\src\blogs\BlogPage.jsx
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogs from './blog';
-import Search from '../common/Search';
 
 function BlogPage() {
     const [currentPage, setCurrentPage] = useState(1);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('All');
     const itemsPerPage = 6;
+
+    // Get unique categories automatically from blogs data
+    const categories = ['All', ...new Set(blogs.map(blog => blog.category))];
 
     // Sort blogs by newest first
     const sortedBlogs = [...blogs].reverse();
 
-    // Filter blogs based on search query
+    // Filter blogs based on search query and category
     const filteredBlogs = sortedBlogs.filter(blog => {
-        const query = searchQuery.toLowerCase();
-        return (
-            blog.title.toLowerCase().includes(query) ||
-            blog.category.toLowerCase().includes(query) ||
-            blog.excerpt.toLowerCase().includes(query) ||
-            blog.content.toLowerCase().includes(query)
-        );
+        const matchesCategory = selectedCategory === 'All' || blog.category === selectedCategory;
+        return matchesCategory;
     });
 
     // Calculate pagination details
@@ -34,6 +29,19 @@ function BlogPage() {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const getVisiblePages = () => {
+        if (totalPages <= 3) {
+            return [...Array(totalPages)].map((_, i) => i + 1);
+        }
+
+        let start = currentPage;
+        if (currentPage > totalPages - 2) {
+            start = totalPages - 2;
+        }
+
+        return [start, start + 1, start + 2];
     };
 
     return (
@@ -50,13 +58,30 @@ function BlogPage() {
                     <div className="mx-auto bg-primary" style={{ height: '4px', width: '60px', borderRadius: '2px' }}></div>
                 </div>
 
-                {/* Search Bar */}
-                <div className="row justify-content-center mb-5">
-                    <div className="col-md-8 col-lg-6">
-                        <Search onSearch={(query) => {
-                            setSearchQuery(query);
-                            setCurrentPage(1);
-                        }} />
+                {/* Search and Filter Section */}
+                <div className="row justify-content-center mb-5 g-3">
+                    <div className="col-md-4 col-lg-3">
+                        <div className="input-group shadow-sm h-100">
+                            <span className="input-group-text bg-white border-0 ps-3">
+                                <i className="fas fa-filter text-primary"></i>
+                            </span>
+                            <select 
+                                className="form-select border-0 shadow-none" 
+                                value={selectedCategory}
+                                onChange={(e) => {
+                                    setSelectedCategory(e.target.value);
+                                    setCurrentPage(1);
+                                }}
+                                style={{ cursor: 'pointer' }}
+                                aria-label="Filter by topic"
+                            >
+                                {categories.map((category) => (
+                                    <option key={category} value={category}>
+                                        {category === 'All' ? 'All Topics' : category}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -103,8 +128,7 @@ function BlogPage() {
                                 <i className="fas fa-search fa-3x opacity-25"></i>
                             </div>
                             <h3>No results found</h3>
-                            <p className="text-muted">We couldn't find any articles matching "{searchQuery}". Try different keywords.</p>
-                            <button className="btn btn-primary mt-2" onClick={() => setSearchQuery('')}>Clear Search</button>
+                            <p className="text-muted">We couldn't find any articles in this category.</p>
                         </div>
                     )}
                 </div>
@@ -123,14 +147,14 @@ function BlogPage() {
                                     <i className="fas fa-chevron-left"></i>
                                 </button>
                             </li>
-                            {[...Array(totalPages)].map((_, index) => (
-                                <li key={index + 1} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
+                            {getVisiblePages().map((pageNumber) => (
+                                <li key={pageNumber} className={`page-item ${currentPage === pageNumber ? 'active' : ''}`}>
                                     <button 
                                         className="page-link border-0 shadow-sm mx-1 rounded-circle fw-bold" 
-                                        onClick={() => handlePageChange(index + 1)}
+                                        onClick={() => handlePageChange(pageNumber)}
                                         style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                     >
-                                        {index + 1}
+                                        {pageNumber}
                                     </button>
                                 </li>
                             ))}
