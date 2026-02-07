@@ -2,7 +2,7 @@ import React from 'react';
 
 function WhyChooseUs() {
     return (
-        <section className="py-5 bg-light">
+        <section className="py-5 bg-white">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 mb-4 mb-lg-0">

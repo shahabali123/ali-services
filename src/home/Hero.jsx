@@ -17,7 +17,7 @@ function Hero({ onPlanSelect }) {
                         </h1>
 
                         <p className="lead fs-4 mb-5 text-muted animate-fade-up delay-100">
-                            Stop refreshing the portal. Our automated system finds and books earlier B1/B2 visa appointment slots in Islamabad & Karachi for you.
+                            Stop refreshing the portal. Our automated system finds and books earlier B1/B2 visa appointment slots in Pakistan, UAE & Saudi Arabia for you.
                         </p>
 
                         <div className="d-flex flex-column flex-sm-row gap-3 animate-fade-up delay-200 justify-content-center justify-content-lg-start">

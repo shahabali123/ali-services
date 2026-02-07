@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
   return (
     <div className="container-fluid mt-5 px-0">
@@ -34,7 +36,7 @@ function Footer() {
                 </li>
                 <li className="mb-3">
                   <span className="fa-li"><i className="fas fa-envelope"></i></span>
-                  <span className="ms-2">info@naxgatvisaservices.com</span>
+                  <span className="ms-2">naxgat@gmail.com</span>
                 </li>
                 <li className="mb-3">
                   <span className="fa-li"><i className="fas fa-shield-alt"></i></span>
@@ -74,6 +76,7 @@ function Footer() {
           © 2026 Copyright: 
           <a className="text-white ms-1 fw-bold text-decoration-none" href="/">Naxgat Visa Services</a>
           <span className="ms-3 text-white-50 small">| US Visa Consultant Pakistan</span>
+          <span className="ms-3 text-white-50 small">| <Link to="/privacy-policy" className="text-white-50 text-decoration-none">Privacy Policy</Link></span>
         </div>
       </footer>
     </div>

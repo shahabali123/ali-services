@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Faqs from "./Faqs";
 import Hero from "./Hero";
 import Pricing from "./Pricing";
@@ -13,6 +14,7 @@ import ContactCTA from "./ContactCTA";
 function HomePage() {
     const [showModal, setShowModal] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState('');
+    const [agreed, setAgreed] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -45,6 +47,10 @@ function HomePage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!agreed) {
+            alert("Please agree to the Privacy Policy before submitting.");
+            return;
+        }
         const text = `*New Plan Inquiry*\n\n*Plan:* ${selectedPlan}\n*Slots Needed:* ${formData.numberOfSlots}\n*Preferred Time:* ${formData.preferredTime}\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n\n*Message:* ${formData.message}`;
         const encodedText = encodeURIComponent(text);
         window.open(`https://wa.me/923420475187?text=${encodedText}`, '_blank');
@@ -52,11 +58,11 @@ function HomePage() {
     };
 
     return ( 
-        <div className="container-fluid">
+        <div className="home-wrapper">
             <Helmet>
                 <title>US Visa Appointment Rescheduling Pakistan | Fast-Track | Naxgat</title>
-                <meta name="description" content="Secure earlier US Visa interview slots in Islamabad and Karachi. We specialize in B1/B2 & F1 visa appointment rescheduling to fast-track your travel plans." />
-                <meta name="keywords" content="US Visa Pakistan, Visa Appointment Rescheduling, Islamabad Consulate, Karachi Consulate, Early Visa Slots, US Visa Consultant, CGI Federal Monitor, B1/B2 Visa, F1 Visa" />
+                <meta name="description" content="Secure earlier US Visa interview slots in Pakistan, UAE & Saudi Arabia. We specialize in B1/B2 & F1 visa appointment rescheduling to fast-track your travel plans." />
+                <meta name="keywords" content="US Visa Pakistan, US Visa UAE, US Visa Saudi Arabia, Visa Appointment Rescheduling, Early Visa Slots, US Visa Consultant, CGI Federal Monitor, B1/B2 Visa, F1 Visa" />
                 <link rel="canonical" href="https://naxgat.com/" />
                 
                 {/* Robots & Crawlers */}
@@ -67,14 +73,14 @@ function HomePage() {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://naxgat.com/" />
                 <meta property="og:title" content="US Visa Appointment Rescheduling Pakistan | Naxgat" />
-                <meta property="og:description" content="Don't wait years for your US Visa. We help you secure earlier interview slots in Islamabad and Karachi." />
+                <meta property="og:description" content="Don't wait years for your US Visa. We help you secure earlier interview slots in Pakistan, UAE & Saudi Arabia." />
                 <meta property="og:image" content="https://naxgat.com/media/images/hero.jpeg" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://naxgat.com/" />
                 <meta property="twitter:title" content="US Visa Appointment Rescheduling Pakistan | Naxgat" />
-                <meta property="twitter:description" content="Don't wait years for your US Visa. We help you secure earlier interview slots in Islamabad and Karachi." />
+                <meta property="twitter:description" content="Don't wait years for your US Visa. We help you secure earlier interview slots in Pakistan, UAE & Saudi Arabia." />
                 <meta property="twitter:image" content="https://naxgat.com/media/images/hero.jpeg" />
 
                 {/* Structured Data (JSON-LD) for Google Rich Results */}
@@ -133,6 +139,12 @@ function HomePage() {
                             <div className="mb-3">
                                 <label className="form-label fw-bold">Message (Optional)</label>
                                 <textarea className="form-control" name="message" value={formData.message} onChange={handleChange} rows="3" placeholder="Any specific requirements?"></textarea>
+                            </div>
+                            <div className="mb-3 form-check">
+                                <input type="checkbox" className="form-check-input" id="privacyCheck" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} required />
+                                <label className="form-check-label small" htmlFor="privacyCheck">
+                                    I agree to the <Link to="/privacy-policy" target="_blank" onClick={(e) => e.stopPropagation()}>Privacy Policy</Link>
+                                </label>
                             </div>
                             <div className="d-grid">
                                 <button type="submit" className="btn btn-success fw-bold py-2"><i className="fab fa-whatsapp me-2"></i>Send Inquiry on WhatsApp</button>

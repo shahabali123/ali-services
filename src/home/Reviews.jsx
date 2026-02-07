@@ -1,12 +1,11 @@
 function Reviews() {
   return (
-    <div className="container-fluid my-5">
-      <div className="row text-center d-flex flex-column align-items-center mb-4">
-        <h3 className="mb-3">
-          <b>What our</b>
-          <span className="text-muted"> clients are saying</span>
-        </h3>
-        <hr className="w-25" />
+    <section className="py-5 bg-white">
+    <div className="container">
+      <div className="text-center mb-5">
+        <h2 className="display-5 fw-bold">Client Success Stories</h2>
+        <p className="lead text-muted">Don't just take our word for it.</p>
+        <div className="mx-auto bg-primary" style={{ height: '4px', width: '60px', borderRadius: '2px' }}></div>
       </div>
 
       <div className="row d-flex justify-content-center align-items-center">
@@ -84,6 +83,7 @@ function Reviews() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

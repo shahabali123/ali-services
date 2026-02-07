@@ -1,15 +1,16 @@
 function Team() {
     return ( 
-        <div className="container-fluid">
-            <div className="row text-center my-5 d-flex flex-column align-items-center">
-                <h1>Executive Team</h1>
-                <hr className="w-25"/>
+        <section className="py-5 bg-light">
+        <div className="container">
+            <div className="text-center mb-5">
+                <h2 className="display-5 fw-bold">Executive Team</h2>
+                <div className="mx-auto bg-primary" style={{ height: '4px', width: '60px', borderRadius: '2px' }}></div>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
                 <div className="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
-                        <img src="media/images/profile.png" alt="" className="rounded-circle img-fluid w-50"/>
-                        <h3 className="mt-3">Shahab Ali</h3>
-                        <p>Expert Advisor</p>
+                        <img src="media/images/profile.png" alt="Shahab Ali" className="rounded-circle img-fluid shadow-sm mb-3" style={{width: '150px', height: '150px', objectFit: 'cover'}}/>
+                        <h4 className="fw-bold mb-1">Shahab Ali</h4>
+                        <p className="text-muted">Expert Advisor</p>
                 </div>
                 {/* <div className="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
                         <img src="https://automaster.ee/wp-content/uploads/2019/02/person6.jpg" alt="" className="rounded-circle img-fluid w-50"/>
@@ -27,8 +28,8 @@ function Team() {
                         <p>Chief Executive Officer</p>
                 </div> */}
             </div>
-            <hr/>
         </div>
+        </section>
      );
 }
 

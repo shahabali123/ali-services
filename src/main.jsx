@@ -11,6 +11,7 @@ import BlogPage from './blogs/BlogPage'
 import BlogDetail from './blogs/BlogDetail.jsx'
 import NotFound from './common/NotFound'
 import Contact from './contact/Contact.jsx'
+import PrivacyPolicy from './common/PrivacyPolicy.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/blogs' element={<BlogPage />} />
         <Route path='/blogs/:id' element={<BlogDetail />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <FloatingWhatsApp />

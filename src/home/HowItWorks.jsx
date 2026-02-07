@@ -25,7 +25,7 @@ function HowItWorks() {
     ];
 
     return (
-        <section className="py-5 bg-white">
+        <section className="py-5 bg-light">
             <div className="container">
                 <div className="text-center mb-5" id='how-it-works'>
                     <h2 className="display-5 fw-bold">How It Works</h2>

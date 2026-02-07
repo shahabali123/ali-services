@@ -2,7 +2,8 @@ import React from 'react';
 
 function Pricing({ onPlanSelect }) {
   return (
-    <div className="container my-5" id="services">
+    <section className="py-5 bg-white" id="services">
+    <div className="container">
       <div className="text-center mb-5">
         <h2 className="display-5 fw-bold mb-3">Premium Visa Services</h2>
         <p className="lead text-muted">Specialized B1/B2 Visa Rescheduling for Pakistan, UAE & Saudi Arabia</p>
@@ -59,8 +60,8 @@ function Pricing({ onPlanSelect }) {
         .hover-scale { transition: transform 0.2s; }
         .hover-scale:hover { transform: scale(1.02); }
       `}</style>
-      <hr className="mt-5" />
     </div>
+    </section>
   );
 }
 

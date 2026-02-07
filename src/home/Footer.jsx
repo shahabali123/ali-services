@@ -9,7 +9,7 @@ function Footer() {
                     <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
                         <h5 className="text-uppercase fw-bold mb-3 text-primary">Naxgat Visa Services</h5>
                         <p className="small text-white-50">
-                            We specialize in US Visa appointment rescheduling for Islamabad and Karachi consulates. Our automated system ensures you get the earliest possible dates.
+                            We specialize in US Visa appointment rescheduling for Pakistan, UAE & Saudi Arabia. Our automated system ensures you get the earliest possible dates.
                         </p>
                         <div className="mt-4">
                             <a href="#" className="btn btn-outline-light btn-sm rounded-circle me-2"><i className="fab fa-facebook-f"></i></a>
@@ -32,7 +32,7 @@ function Footer() {
                     <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <h6 className="text-uppercase fw-bold mb-3">Legal</h6>
                         <ul className="list-unstyled">
-                            <li className="mb-2"><a href="#" className="text-white-50 text-decoration-none hover-white">Privacy Policy</a></li>
+                            <li className="mb-2"><Link to="/privacy-policy" className="text-white-50 text-decoration-none hover-white">Privacy Policy</Link></li>
                             <li className="mb-2"><a href="#" className="text-white-50 text-decoration-none hover-white">Terms of Service</a></li>
                             <li className="mb-2"><a href="#" className="text-white-50 text-decoration-none hover-white">Disclaimer</a></li>
                             <li className="mb-2"><a href="#" className="text-white-50 text-decoration-none hover-white">Refund Policy</a></li>
@@ -43,7 +43,7 @@ function Footer() {
                         <h6 className="text-uppercase fw-bold mb-3">Contact</h6>
                         <ul className="list-unstyled small text-white-50">
                             <li className="mb-3 d-flex"><i className="fas fa-map-marker-alt mt-1 me-3 text-primary"></i> Islamabad, Pakistan</li>
-                            <li className="mb-3 d-flex"><i className="fas fa-envelope mt-1 me-3 text-primary"></i> contact@naxgatvisaservices.com</li>
+                            <li className="mb-3 d-flex"><i className="fas fa-envelope mt-1 me-3 text-primary"></i> naxgat@gmail.com</li>
                             <li className="mb-3 d-flex"><i className="fas fa-phone mt-1 me-3 text-primary"></i> +92 342 0475187</li>
                         </ul>
                     </div>

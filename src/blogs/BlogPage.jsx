@@ -48,7 +48,7 @@ function BlogPage() {
         <div className="container-fluid bg-light py-5">
             <Helmet>
                 <title>Latest US Visa Updates & Tips | Naxgat Visa Services Blog</title>
-                <meta name="description" content="Stay updated with the latest US visa news, interview tips, and appointment wait times for Pakistan. Expert advice for your visa journey." />
+                <meta name="description" content="Stay updated with the latest US visa news, interview tips, and appointment wait times for Pakistan, UAE & Saudi Arabia. Expert advice for your visa journey." />
                 <meta name="keywords" content="US Visa Blog, Visa Interview Tips, DS-160 Guide, Visa Wait Times 2025, US Visa News Pakistan" />
             </Helmet>
             <div className="container">
