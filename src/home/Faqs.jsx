@@ -144,6 +144,7 @@ function Faqs() {
             </div>
             <hr/>
         </div>
+        </section>
      );
 }
 
