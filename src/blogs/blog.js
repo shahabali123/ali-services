@@ -589,6 +589,54 @@ const blogs = [
 
             <p class="text-muted text-center small"><em>Disclaimer: While our forecasts are based on historical data and real-time monitoring, US Consulate slot releases are subject to change without notice.</em></p>
         `
+    },
+    {
+        id: 26,
+        title: "The 10-Day Drought: Why are there ZERO US Visa Slots for May and June 2026?",
+        image: "/media/images/portal-drought-update.png", 
+        date: "Feb 10, 2026",
+        author: "Shahab Ali",
+        category: "Portal Alert",
+        excerpt: "The portal hasn't moved in over 10 days. From policy shifts to system freezes, we explore what's happening behind the scenes at the US Embassy.",
+        content: `
+            <p>If you have been checking the US visa portal for the last 10 days, you’ve likely seen a ghost town. No slots for May. No slots for June. In fact, for many, the calendar won't even let you click past 2027. This isn't a glitch in your browser—it's a reflection of a major shift in US Consular operations that took effect in late January 2026.</p>
+            
+            <h5 class="mt-4">1. The 'Policy Pause' Ripple Effect</h5>
+            <p>As of January 21, 2026, the US Department of State implemented a temporary pause on <strong>Immigrant Visa</strong> issuances for 75 countries, including Pakistan. While this officially targets Green Card applicants, it has caused a massive 'administrative bottleneck' at the Embassies in Islamabad and Karachi.</p>
+            <p>Consular officers are currently undergoing retraining on new 'Public Charge' vetting rules. This means the staff usually assigned to Non-Immigrant (B1/B2) interviews are often diverted to handle the backlog and restructuring of immigrant cases, leading to the current 10-day silence in slot releases.</p>
+
+            <h5 class="mt-4">2. The 'May-June' Blockade</h5>
+            <p>Why are there no slots for May or June specifically? In 2026, the US Mission in Pakistan has moved toward a <strong>'Just-in-Time' release strategy.</strong> Instead of opening the whole year at once, they are holding back May and June slots to prioritize 'Interview Waiver' (Dropbox) cases and emergency student renewals.</p>
+            <p>Historically, when the portal stays quiet for more than 10 days, it indicates that the Consulate is preparing for a <strong>Bulk Correction.</strong> They are likely recalculating their daily capacity based on new security protocols (Presidential Proclamation 10998) before dumping several hundred slots at once.</p>
+
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <div class="p-4 bg-dark text-white rounded shadow-sm">
+                        <h6 class="fw-bold text-warning"><i class="fas fa-microchip me-2"></i>The 2026 Technical Reality</h6>
+                        <p class="mb-0 small">The CGI Federal portal now uses advanced AI to detect 'refresh patterns.' If you have been searching manually every hour for the last 10 days without seeing a slot, the system may have 'soft-shadow-banned' your session. You see 'No Slots,' while our automated trackers are still seeing micro-movements in the backend.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mt-4">3. When Will the Drought End?</h5>
+            <p>Based on our tracking of the 2025-2026 cycle, these 'Dead Zones' typically last 12–14 days. We are currently on Day 10. We anticipate a <strong>Correction Drop</strong> within the next 72 to 96 hours. This drop will likely include:</p>
+            <ul>
+                <li><strong>Late 2026 regular appointments.</strong></li>
+                <li><strong>Limited 'Golden' cancellations for Summer 2026.</strong></li>
+                <li><strong>New slots for the 221(g) follow-up queue.</strong></li>
+            </ul>
+
+            <h5 class="mt-4">How to Survive the Silence</h5>
+            <p>The biggest mistake you can make right now is giving up or, conversely, refreshing until you get a 72-hour lockout. When the portal 'wakes up' after a long drought, the competition is 10x higher than usual.</p>
+
+            <div class="text-center mt-5">
+                <div class="p-4 border rounded bg-light">
+                    <h5 class="fw-bold text-primary">Stop Staring at an Empty Calendar.</h5>
+                    <p>Our priority monitoring doesn't sleep, even when the portal is quiet. We catch the first second of the 'Post-Drought' drop.</p>
+                    <a href="https://wa.me/923420475187?text=Hi%20Naxgat%2C%20the%20portal%20has%20been%20empty%20for%2010%20days.%20Please%20help%20me%20catch%20the%20next%20drop!" target="_blank" class="btn btn-primary btn-lg px-5 shadow">Get Priority Alert Now</a>
+                </div>
+            </div>
+        `
     }
 
 ];
