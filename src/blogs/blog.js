@@ -637,8 +637,52 @@ const blogs = [
                 </div>
             </div>
         `
-    }
+    },
+    {
+    "id": 27,
+    "title": "Current US Visa Updates: The 'Post-Pause' Scramble and Why Your Portal Still Shows No Slots",
+    "image": "/media/images/blog27.png",
+    "date": "Feb 14, 2026",
+    "author": "Shahab Ali",
+    "category": "Portal Alert",
+    "excerpt": "With the January 21st policy pause now in full effect, we break down why the US Visa portal is showing a 10-day silence and when to expect the next massive slot release.",
+    "content": `
+        <p>It is mid-February 2026, and if you are staring at a blank calendar on the US Visa scheduling portal, you are not alone. Following the <strong>Presidential Proclamation 10998</strong> and the January 21st pause on certain immigrant visa categories, the system has entered a period of 'Consular Recalibration.' This has left thousands of B1/B2 and F1 applicants wondering where the May and June slots have disappeared to.</p>
+        
+        <h5 class="mt-4">1. The 'Public Charge' Bottleneck</h5>
+        <p>As of late January, the US Department of State has temporarily paused immigrant visa issuances for 75 countries, including Pakistan. While this primarily affects Green Card seekers, the real-world impact has spilled over into the <strong>Non-Immigrant Visa (NIV)</strong> units. Consular staff in Islamabad and Karachi are currently re-prioritizing workflows to handle new vetting requirements, leading to the current 10-day 'drought' in B1/B2 slot releases.</p>
+        
+        <h5 class="mt-4">2. Why May and June 2026 are 'Locked'</h5>
+        <p>The US Mission has shifted to a highly controlled <strong>Inventory Management System</strong> for 2026. Instead of releasing blocks of dates months in advance, they are holding May and June 2026 slots to accommodate:</p>
+        <ul>
+            <li><strong>The 12-Month Renewal Window:</strong> Priority is being given to 'Interview Waiver' (Dropbox) cases for those whose visas expired within the last year.</li>
+            <li><strong>Student Peak Season:</strong> Internal systems are reserving capacity for the upcoming Fall 2026 student rush (F/M/J visas) to ensure academic start dates are met.</li>
+        </ul>
 
+        <div class="row my-4">
+            <div class="col-md-12">
+                <div class="p-4 bg-dark text-white rounded shadow-sm">
+                    <h6 class="fw-bold text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Security Alert: Social Media Vetting</h6>
+                    <p class="mb-0 small">Reminder: Under the new 2026 guidelines, F, M, and J applicants are now required to ensure social media accounts are set to 'Public' to facilitate admissibility checks. Failure to do so is currently causing 'Administrative Processing' (221g) delays even after a successful interview.</p>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4">3. Predicted 'Correction Drop' Timeline</h5>
+        <p>Historically, when the portal enters a 10+ day silence during a policy shift, it is followed by a <strong>Bulk Correction Drop.</strong> Our trackers indicate that the CGI Federal backend is currently being updated to reflect new daily interview quotas. We anticipate a significant release of slots for <strong>late 2026 and early 2027</strong> within the next 48 to 72 hours.</p>
+
+        <h5 class="mt-4">Survival Guide: Avoiding the 72-Hour Lockout</h5>
+        <p>The 2026 portal is more aggressive than ever in detecting bots and 'power-refreshers.' If you check more than 3-5 times in a single session, you risk a soft-shadow-ban where you see 'No Slots' even when they are available to others.</p>
+
+        <div class="text-center mt-5">
+            <div class="p-4 border rounded bg-light">
+                <h5 class="fw-bold text-primary">Don't Waste Your Refreshes.</h5>
+                <p>Our automated monitoring identifies 'Micro-Drops' before they hit the general public. Get notified the second the May-June blockade breaks.</p>
+                <a href="https://wa.me/923420475187?text=Hi%20Naxgat%2C%20I%20need%20the%20latest%20February%202026%20slot%20updates!" target="_blank" class="btn btn-primary btn-lg px-5 shadow">Join the Priority Alert List</a>
+            </div>
+        </div>
+    `
+}
 ];
 
 export default blogs;
