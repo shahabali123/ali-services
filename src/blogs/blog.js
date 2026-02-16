@@ -682,7 +682,48 @@ const blogs = [
             </div>
         </div>
     `
-}
+    },
+    {
+        id: 28,
+        title: "Global Visa Update 2026: Major Policy Shifts in the US, UK, Canada, and Europe",
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        date: "Feb 16, 2026",
+        author: "Shahab Ali",
+        category: "Global Updates",
+        excerpt: "From the new US vetting protocols to the UK's revised salary thresholds, 2026 is a year of massive change. Here is what every traveler needs to know.",
+        content: `
+            <p>The landscape of international travel has shifted dramatically in early 2026. Major Western nations have introduced new digital tracking systems and stricter financial requirements. If you are planning to travel, study, or work abroad this year, the old rules no longer apply.</p>
+            
+            <h5 class="mt-4">1. United States: The Vetting Evolution</h5>
+            <p>Beyond the current slot drought, the US has fully integrated <strong>AI-driven social media screening</strong> for all B1/B2 applicants. Consular officers are now focusing heavily on 'economic intent.' Having a high bank balance is no longer enough; you must demonstrate a consistent, multi-year history of income to prove strong ties to your home country.</p>
+            
+            <h5 class="mt-4">2. United Kingdom: New Salary & Health Surcharge Limits</h5>
+            <p>The UK has recently updated its <strong>Skilled Worker Visa</strong> requirements. The minimum salary threshold has seen another increase, and the Immigration Health Surcharge (IHS) has been adjusted for 2026. For visitors, the UK's new **ETA (Electronic Travel Authorisation)** system is now mandatory for almost all non-visa national travelers, mirroring the US ESTA model.</p>
+
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <div class="p-4 bg-light border-start border-4 border-primary rounded shadow-sm">
+                        <h6 class="fw-bold text-primary"><i class="fas fa-euro-sign me-2"></i>Europe: The ETIAS Launch</h6>
+                        <p class="mb-0 small">The much-anticipated <strong>ETIAS (European Travel Information and Authorisation System)</strong> is now fully operational. Travelers entering the Schengen Area now require pre-approval. While simple for many, any past visa refusals in the US or UK are now being flagged across the European database, leading to unexpected delays.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mt-4">3. Canada: Focused Study Permit Caps</h5>
+            <p>Canada continues its 2025-2026 strategy of capping international student permits. The focus has shifted toward high-demand labor sectors (Healthcare, STEM, and Trades). If you are applying for a Canadian Visitor Visa, be prepared for longer processing times as the IRCC prioritizes work permit backlogs.</p>
+
+            <h5 class="mt-4">How to Navigate the 2026 Changes</h5>
+            <p>The common theme across all major countries this year is <strong>Digital Integration.</strong> Your travel history in one country is now more visible to others than ever before. A rejection in one system can create a 'red flag' in another.</p>
+            
+            <div class="card bg-dark text-white border-0 my-5 shadow">
+                <div class="card-body p-4 text-center">
+                    <h4 class="fw-bold text-info">Need a Global Strategy?</h4>
+                    <p>Don't apply blindly. We provide profile audits for US, UK, and Schengen visas to ensure your application meets the 2026 standards.</p>
+                    <a href="https://wa.me/923420475187?text=Hi%20Naxgat%20Services%2C%20I%20need%20a%20global%20visa%20consultation" target="_blank" class="btn btn-info btn-lg fw-bold px-4 shadow">Get a Professional Consultation</a>
+                </div>
+            </div>
+        `
+    }
 ];
 
 export default blogs;

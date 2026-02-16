@@ -77,6 +77,7 @@ function Footer() {
           <a className="text-white ms-1 fw-bold text-decoration-none" href="/">Naxgat Visa Services</a>
           <span className="ms-3 text-white-50 small">| US Visa Consultant Pakistan</span>
           <span className="ms-3 text-white-50 small">| <Link to="/privacy-policy" className="text-white-50 text-decoration-none">Privacy Policy</Link></span>
+          <span className="ms-3 text-white-50 small">| <Link to="/terms-of-service" className="text-white-50 text-decoration-none">Terms of Service</Link></span>
         </div>
       </footer>
     </div>

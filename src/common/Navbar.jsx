@@ -68,6 +68,15 @@ function Navbar() {
                                 Privacy Policy
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink
+                                className={({ isActive }) => `nav-link fw-medium ${isActive ? "text-primary active" : "text-dark"}`}
+                                to="/terms-of-service"
+                                onClick={handleNavLinkClick}
+                            >
+                                Terms of Service
+                            </NavLink>
+                        </li>
                     </ul>
                     <div className="d-flex ms-lg-3 mt-3 mt-lg-0 search-container">
                         <Search />

@@ -33,7 +33,7 @@ function Footer() {
                         <h6 className="text-uppercase fw-bold mb-3">Legal</h6>
                         <ul className="list-unstyled">
                             <li className="mb-2"><Link to="/privacy-policy" className="text-white-50 text-decoration-none hover-white">Privacy Policy</Link></li>
-                            <li className="mb-2"><a href="#" className="text-white-50 text-decoration-none hover-white">Terms of Service</a></li>
+                            <li className="mb-2"><Link to="/terms-of-service" className="text-white-50 text-decoration-none hover-white">Terms of Service</Link></li>
                             <li className="mb-2"><a href="#" className="text-white-50 text-decoration-none hover-white">Disclaimer</a></li>
                             <li className="mb-2"><a href="#" className="text-white-50 text-decoration-none hover-white">Refund Policy</a></li>
                         </ul>
