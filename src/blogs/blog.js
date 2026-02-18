@@ -769,7 +769,7 @@ const blogs = [
     "id": 30,
     "title": "Ramadan 2026: Embassy Closures and Timings in Pakistan, UAE & Saudi Arabia",
     "image": "/media/images/blog30.png",
-    "date": "Feb 25, 2026",
+    "date": "Feb 19, 2026",
     "author": "Shahab Ali",
     "category": "Travel Advisory",
     "excerpt": "Ramadan 2026 is expected to begin around February 20th. Get the essential details on how this Holy Month will impact visa application processing and embassy operational hours across key regions.",
