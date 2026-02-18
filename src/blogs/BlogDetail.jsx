@@ -22,6 +22,8 @@ const BlogDetail = () => {
   const shareUrl = window.location.href;
   const title = blog.title;
   
+  const description = blog.excerpt || `Read our latest article on ${blog.title} for US visa insights and tips.`;
+
   // SEO Constants
   const siteUrl = "https://naxgat.com";
   const blogUrl = `${siteUrl}/blogs/${blog.id}`;
@@ -44,7 +46,7 @@ const BlogDetail = () => {
     <div className="container mt-5">
       <Helmet>
         <title>{blog.title} | Naxgat Visa Insights</title>
-        <meta name="description" content={blog.excerpt || `Read about ${blog.title} on Naxgat Visa Services blog.`} />
+        <meta name="description" content={description} />
         <meta name="keywords" content={`US Visa, Pakistan, Visa Appointment, ${blog.category || 'Visa Tips'}, ${blog.title}`} />
         <link rel="canonical" href={blogUrl} />
 
@@ -56,16 +58,16 @@ const BlogDetail = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={blogUrl} />
         <meta property="og:title" content={blog.title} />
-        <meta property="og:description" content={blog.excerpt} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:site_name" content="Naxgat Visa Services" />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={blogUrl} />
-        <meta property="twitter:title" content={blog.title} />
-        <meta property="twitter:description" content={blog.excerpt} />
-        <meta property="twitter:image" content={imageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={blogUrl} />
+        <meta name="twitter:title" content={blog.title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imageUrl} />
 
         {/* Structured Data (JSON-LD) */}
         <script type="application/ld+json">
@@ -88,7 +90,7 @@ const BlogDetail = () => {
                 "url": `${siteUrl}/media/images/hero.jpeg`
               }
             },
-            "description": blog.excerpt,
+            "description": description,
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": blogUrl

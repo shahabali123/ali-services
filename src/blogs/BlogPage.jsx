@@ -47,9 +47,25 @@ function BlogPage() {
     return (
         <div className="container-fluid bg-light py-5">
             <Helmet>
-                <title>Latest US Visa Updates & Tips | Naxgat Visa Services Blog</title>
-                <meta name="description" content="Stay updated with the latest US visa news, interview tips, and appointment wait times for Pakistan, UAE & Saudi Arabia. Expert advice for your visa journey." />
+                <title>Latest US Visa Updates &amp; Tips | Naxgat Visa Services Blog</title>
+                <meta name="description" content="Stay updated with the latest US visa news, interview tips, and appointment wait times. Expert advice for your visa journey." />
                 <meta name="keywords" content="US Visa Blog, Visa Interview Tips, DS-160 Guide, Visa Wait Times 2025, US Visa News Pakistan" />
+                <link rel="canonical" href="https://naxgat.com/blogs" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://naxgat.com/blogs" />
+                <meta property="og:title" content="Latest US Visa Updates &amp; Tips | Naxgat Visa Services Blog" />
+                <meta property="og:description" content="Stay updated with the latest US visa news, interview tips, and appointment wait times. Expert advice for your visa journey." />
+                <meta property="og:image" content="https://naxgat.com/media/images/hero.jpeg" />
+                <meta property="og:site_name" content="Naxgat Visa Services" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content="https://naxgat.com/blogs" />
+                <meta name="twitter:title" content="Latest US Visa Updates &amp; Tips | Naxgat Visa Services Blog" />
+                <meta name="twitter:description" content="Stay updated with the latest US visa news, interview tips, and appointment wait times. Expert advice for your visa journey." />
+                <meta name="twitter:image" content="https://naxgat.com/media/images/hero.jpeg" />
             </Helmet>
             <div className="container">
                 <div className="text-center mb-5">
