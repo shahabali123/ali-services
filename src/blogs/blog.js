@@ -764,7 +764,62 @@ const blogs = [
             </div>
         </div>
     `
-}
+    },
+    {
+    "id": 30,
+    "title": "Ramadan 2026: Embassy Closures and Timings in Pakistan, UAE & Saudi Arabia",
+    "image": "/media/images/blog30.png",
+    "date": "Feb 25, 2026",
+    "author": "Shahab Ali",
+    "category": "Travel Advisory",
+    "excerpt": "Ramadan 2026 is expected to begin around February 20th. Get the essential details on how this Holy Month will impact visa application processing and embassy operational hours across key regions.",
+    "content": `
+        <p>As Ramadan 2026 approaches, expected to start around <strong>February 20th</strong> (pending moon sighting), travelers and visa applicants in Pakistan, the UAE, and Saudi Arabia should be aware of important changes to embassy and consulate operations. Expect shorter working hours, possible closures, and longer processing times during this time, which requires careful planning.</p>
+        
+        <h5 class="mt-4">1. General Impact of Ramadan on Embassies</h5>
+        <p>In Muslim-majority countries, diplomatic missions—including US, UK, Schengen, and Canadian embassies—will change their schedules to support fasting staff and local traditions. This usually means:</p>
+        <ul>
+            <li><strong>Reduced Working Hours:</strong> Consular sections will have shorter hours, often closing earlier than usual.</li>
+            <li><strong>Increased Processing Times:</strong> Expect delays for visa applications, passport renewals, and other consular services due to the shortened workday and possible staff shortages.</li>
+            <li><strong>Limited Appointments:</strong> Interview slots may be fewer, especially during the final week of Ramadan and leading up to Eid al-Fitr.</li>
+        </ul>
+
+        <div class="row my-4">
+            <div class="col-md-12">
+                <div class="p-4 bg-dark text-white rounded shadow-sm">
+                    <h6 class="fw-bold text-warning"><i class="fas fa-calendar-alt me-2"></i>Key Dates for Ramadan 2026 (Estimated)</h6>
+                    <p class="mb-0 small"><strong>Start of Ramadan:</strong> Around February 20, 2026<br><strong>Eid al-Fitr:</strong> Around March 22-23, 2026</p>
+                    <p class="mb-0 small"><em>(Dates are subject to lunar sighting and local government announcements.)</em></p>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4">2. Pakistan: Embassy Timings During Ramadan 2026</h5>
+        <p>In Pakistan, government and diplomatic offices will significantly cut their working hours. The US Embassy in Islamabad and the Consulate in Karachi, along with all Schengen, UK, and Canadian missions, will usually operate on a shorter schedule. Public hours will likely be from <strong>9:00 AM to 1:00 PM</strong> for most services, with interview appointments possibly ending by early afternoon. It is important to check the specific embassy's official website for their exact revised timings as they are announced.</p>
+        
+        <h5 class="mt-4">3. UAE: Consulate Schedule Adjustments for Ramadan 2026</h5>
+        <p>The UAE government also requires reduced working hours during Ramadan. Foreign embassies and consulates in Dubai and Abu Dhabi will follow this guideline. While exact times vary by mission, most will operate from <strong>9:00 AM to 2:00 PM</strong> for public services. Due to the large number of expatriates, appointment availability may be very limited, and waits for document collection may be longer.</p>
+
+        <h5 class="mt-4">4. Saudi Arabia: Ramadan 2026 Embassy Operations</h5>
+        <p>During Ramadan, Saudi Arabia has some of the largest reductions in working hours. Embassies and consulates in Riyadh and Jeddah will likely open for just a few hours in the morning, often from <strong>10:00 AM to 1:00 PM</strong>. Given the importance of the month, plan ahead for any urgent consular needs, as last-minute requests may be hard to handle.</p>
+
+        <h5 class="mt-4">Planning Your Visa Application During Ramadan</h5>
+        <ul>
+            <li><strong>Apply Early:</strong> If you plan to travel in April, May, or June, submit your application *before* Ramadan starts.</li>
+            <li><strong>Confirm Timings:</strong> Always check the official embassy or consulate website for their specific Ramadan schedule. Do not rely on regular opening hours.</li>
+            <li><strong>Expect Delays:</strong> Allow extra time in your travel plans for visa processing.</li>
+            <li><strong>Eid al-Fitr Closures:</strong> All embassies and consulates will completely close for several days around Eid al-Fitr, affecting services before and after the holiday.</li>
+        </ul>
+
+        <div class="text-center mt-5">
+            <div class="p-4 border rounded bg-light">
+                <h5 class="fw-bold text-primary">Need Clarification or Expedited Service?</h5>
+                <p>Understanding Ramadan schedules can be challenging. Contact us for the latest information and help with your visa applications during this time.</p>
+                <a href="https://wa.me/923420475187?text=Hi%20Naxgat%2C%20I%20need%20help%20with%20Ramadan%20embassy%20timings%20and%20visa%20applications!" target="_blank" class="btn btn-primary btn-lg px-5 shadow">Get Expert Guidance</a>
+            </div>
+        </div>
+    `
+    }
 ];
 
 export default blogs;
